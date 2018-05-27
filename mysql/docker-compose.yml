@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - 6033:3306
+    volumes:
+      # previous one is your path and latter one is docker path
+       - ./my.cnf:/etc/mysql/my.cnf
+       - ./mysql-files:/var/lib/mysql-files
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_ROOT_HOST=%

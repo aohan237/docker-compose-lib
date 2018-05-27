@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 9736:6379 # the previous port is your system port and the latter one is the docker port exposed

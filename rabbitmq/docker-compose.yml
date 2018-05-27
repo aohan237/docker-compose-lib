@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    hostname: "rabbitmq"
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=RABBITMQ
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=rabbitmq
+      - RABBITMQ_DEFAULT_VHOST=/
+    ports:
+      - 27651:15672 # for rabbitmq-management
+      - 2765:5672

@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  zoo1:
+    image: titpetric/netdata
+    restart: always
+    hostname: netdata
+    ports:
+      - 19999:19999
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro

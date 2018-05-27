@@ -1,0 +1,14 @@
+# this is an official config, you can find it
+# https://docs.docker.com/samples/library/nginx/#complex-configuration
+version: '3.1'
+
+services:
+  web:
+    image: nginx
+    # volumes:  you can add custom conf
+    #  - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+     - 9090:80
+    environment:
+     - NGINX_HOST=test.com
+     - NGINX_PORT=80

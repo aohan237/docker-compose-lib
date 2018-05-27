@@ -1,0 +1,20 @@
+# this is an official config, you can find it
+# https://docs.docker.com/samples/library/postgres/#-via-docker-stack-deploy-or-docker-compose
+
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 2345:5432
+    environment:
+      POSTGRES_PASSWORD: test
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  jenkins:
+    image: jenkins:latest
+    ports:
+      - 9090:8080
+      - 50001:50001
+    environment:
+      - JENKINS_SLAVE_AGENT_PORT=50001

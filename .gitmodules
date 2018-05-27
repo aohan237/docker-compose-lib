@@ -1,0 +1,21 @@
+[submodule "docker-elk"]
+	path = docker-elk
+	url = https://github.com/deviantony/docker-elk.git
+[submodule "onpremise"]
+	path = onpremise
+	url = https://github.com/getsentry/onpremise.git
+[submodule "sentry"]
+	path = sentry
+	url = https://github.com/getsentry/onpremise.git
+[submodule "docker-spark"]
+	path = docker-spark
+	url = https://github.com/gettyimages/docker-spark
+[submodule "docker-hadoop"]
+	path = docker-hadoop
+	url = https://github.com/big-data-europe/docker-hadoop
+[submodule "kafka-docker"]
+	path = kafka-docker
+	url = https://github.com/wurstmeister/kafka-docker
+[submodule "docker-kafka"]
+	path = docker-kafka
+	url = https://github.com/wurstmeister/kafka-docker
