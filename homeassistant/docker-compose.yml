@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  home-assistant:
+    image: homeassistant/home-assistant:latest
+    restart: always
+    ports:
+      - 8123:8123
+    volumes:
+      # previous one is your path and latter one is docker path
+       - ./config:/config
+    environment:
+      - TZ=Asia/Shanghai
+

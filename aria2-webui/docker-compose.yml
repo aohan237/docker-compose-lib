@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  aria2-with-webui:
+    image: xujinkai/aria2-with-webui:latest
+    restart: always
+    ports:
+      - 6033:3306
+      - 6800:6800
+      - 6888:8080
+    volumes:
+      # previous one is your path and latter one is docker path
+       - ./aria2/download:/data
+       - ./aria2/config:/conf
+    environment:
+      - SECRET=123
